@@ -10,18 +10,33 @@ class Admin extends CI_Controller {
     }
 
     public function index() {
+        $getDraft = $this->madmin->getLastDraft();
+        $repo_id = !empty($getDraft->repo_id) ? $getDraft->repo_id : $this->madmin->insertDraft();
+        redirect("admin/draft/".$repo_id);
+    }
+
+    public function draft($id) {
         $data['title'] = "Repository";
+        $data['repo_id'] = $id;
         $data['types'] = $this->madmin->getAllType();
         $data['subjects'] = $this->madmin->getAllSubject();
         $this->load->template('repo', $data);
     }
 
-    public function insert() {
-        $data = $this->input->post();
-        $data['user_id'] = 1;
-        $this->madmin->insertRepo($data);
+    public function update($id) {
+        $data['title'] = "Repository";
+        $data['repo_id'] = $id;
+        $data['types'] = $this->madmin->getAllType();
+        $data['subjects'] = $this->madmin->getAllSubject();
+        $data['repo'] = $this->madmin->getRepo($id);
+        $this->load->template('repo', $data);
     }
 
+    public function save($repo_id) {
+        $data = $this->input->post();
+        $data['user_id'] = 1;
+        $this->madmin->updateRepo($data, $repo_id);
+    }
 
     public function upload($id) {
         $config['upload_path'] = fileFullPath();

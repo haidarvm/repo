@@ -63,12 +63,13 @@ function uploadFile() {
     var formdata = new FormData();
     formdata.append("files", file);
     var ajax = new XMLHttpRequest();
+    var repo_id = $("#files").data("repo_id");
     ajax.upload.addEventListener("progress", progressHandler, false);
     ajax.addEventListener("load", completeHandler, false);
     ajax.addEventListener("error", errorHandler, false);
     ajax.addEventListener("abort", abortHandler, false);
     ajax.open("POST",
-        "<?=site_url()?>admin/upload/1"
+        "<?=site_url()?>admin/upload/" + repo_id
     ); 
     ajax.send(formdata);
 }

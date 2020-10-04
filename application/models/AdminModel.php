@@ -14,8 +14,22 @@ class AdminModel extends CI_Model {
         parent::__construct();
     }
 
+    public function insertDraft() {
+        $data = ["user_id" => 1];
+        $this->db->insert($this->tb_repo, $data);
+        return $this->db->insert_id();
+    }
+
+    public function getLastDraft() {
+        return $this->db->get_where($this->tb_repo, ['user_id' => 1, 'title' => NULL])->row();
+    }
+
     public function getAllType() {
         return $this->db->get($this->tb_type)->result();
+    }
+
+    public function getRepo($id) {
+        return $this->db->get_where($this->tb_repo, ['repo_id' => $id])->row();
     }
 
     public function getAllSubject() {
@@ -24,6 +38,10 @@ class AdminModel extends CI_Model {
 
     public function insertRepo($data) {
         return $this->db->insert($this->tb_repo, $data);
+    }
+
+    public function updateRepo($data, $id) {
+        return $this->db->update($this->tb_repo, $data, ['repo_id' => $id]);
     }
 
     public function insertFile($data) {
