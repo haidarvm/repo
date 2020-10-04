@@ -2,7 +2,7 @@
 
 application/cache/*
 !application/cache/index.html
-
+assets/files/*
 application/config/config.php
 application/config/database.php
 application/logs/*
