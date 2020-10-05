@@ -10,6 +10,10 @@ class Admin extends CI_Controller {
     }
 
     public function index() {
+        
+    }
+
+    public function insert() {
         $getDraft = $this->madmin->getLastDraft();
         $repo_id = !empty($getDraft->repo_id) ? $getDraft->repo_id : $this->madmin->insertDraft();
         redirect("admin/draft/".$repo_id);
@@ -29,6 +33,7 @@ class Admin extends CI_Controller {
         $data['types'] = $this->madmin->getAllType();
         $data['subjects'] = $this->madmin->getAllSubject();
         $data['repo'] = $this->madmin->getRepo($id);
+        $data['files'] = $this->madmin->getFiles($id);
         $this->load->template('repo', $data);
     }
 
@@ -36,6 +41,12 @@ class Admin extends CI_Controller {
         $data = $this->input->post();
         $data['user_id'] = 1;
         $this->madmin->updateRepo($data, $repo_id);
+        redirect('admin/index');
+    }
+
+    public function delete_file($file_id, $repo_id) {
+        $this->madmin->deleteFile($file_id);
+        redirect("admin/update/". $repo_id);
     }
 
     public function upload($id) {
@@ -44,7 +55,7 @@ class Admin extends CI_Controller {
         $config['max_size'] = 100000;
         $config['max_width'] = 9024;
         $config['max_height'] = 9000;
-        $config['file_name'] = uniqeID();
+        $config['file_name'] = getFileName($_FILES["files"]['name']).'_'.uniqeID();
         // $config['url'] = 'testing';
         $this->load->library('upload', $config);
         if (!$this->upload->do_upload('files')) {
@@ -57,7 +68,7 @@ class Admin extends CI_Controller {
             $data = ['upload_data' => $this->upload->data()];
             $data_ori = [
                 'repo_id' => $id,
-                'full_path' =>  $data['upload_data']['file_path'],
+                'full_path' =>  filePath(),
                 'filename' => $data['upload_data']['file_name'],
                 'original_name' => $data['upload_data']['client_name'],
                 'file_ext' => $data['upload_data']['file_ext'],

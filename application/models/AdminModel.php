@@ -24,16 +24,28 @@ class AdminModel extends CI_Model {
         return $this->db->get_where($this->tb_repo, ['user_id' => 1, 'title' => NULL])->row();
     }
 
+    public function getFiles($repo_id) {
+        return $this->db->get_where($this->tb_files, ['repo_id' => $repo_id])->result();
+    }
+
+    public function getFile($file_id) {
+        return $this->db->get_where($this->tb_files, ['file_id' => $file_id])->row();
+    }
+
     public function getAllType() {
         return $this->db->get($this->tb_type)->result();
     }
 
-    public function getRepo($id) {
-        return $this->db->get_where($this->tb_repo, ['repo_id' => $id])->row();
-    }
-
     public function getAllSubject() {
         return $this->db->get($this->tb_subject)->result();
+    }
+
+    public function deleteFile($file_id) {
+        return $this->db->delete($this->tb_files, ['file_id' => $file_id]);
+    }
+
+    public function getRepo($id) {
+        return $this->db->get_where($this->tb_repo, ['repo_id' => $id])->row();
     }
 
     public function insertRepo($data) {

@@ -6,7 +6,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-  <link href="<?=base_url();?>assets/https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="<?=base_url();?>assets/fonts/icomoon/style.css">
   <link rel="stylesheet" href="<?=base_url();?>assets/fonts/brand/style.css">
@@ -40,13 +40,14 @@
       <div class="container">
         <div class="row align-items-center position-relative">
 
-          <div class="col-3">
+          <div class="col-6">
             <div class="site-logo">
+              <img src="<?=base_url();?>assets/img/logounla.png" width="100"/>
               <a href="<?=site_url();?>home"><strong>Repository UNLA</strong></a>
             </div>
           </div>
 
-          <div class="col-9  text-right">
+          <div class="col-6  text-right">
 
             <span class="d-inline-block d-lg-none"><a href="<?=site_url();?>home/#" class=" site-menu-toggle js-menu-toggle py-5 "><span class="icon-menu h3 text-black"></span></a></span>
 
