@@ -8,7 +8,6 @@
             <div class="col-lg-6 ml-auto">
                 <div class="row ">
                     <div class="col-lg-3">
-                        <h2 class="footer-heading mb-4 text-white">Menu</h2>
                         <ul class="list-unstyled ">
                             <li><a href="<?=site_url();?>home" class="text-white">Home</a></li>
                             <li><a href="<?=site_url();?>browse" class="text-white">Browse</a></li>
