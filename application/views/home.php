@@ -41,10 +41,10 @@
                 </div>
                 <div class="d-flex tutorial-item mb-2">
                     <div class="img-wrap">
-                        <a href="#"><img src="<?=base_url();?>assets/img/DOC.png" alt=" Doc"></a>
+                        <a href="<?=site_url();?>about"><img src="<?=base_url();?>assets/img/DOC.png" alt=" Doc"></a>
                     </div>
                     <div>
-                        <h3><a href="#">About This Repository</a></h3>
+                        <h3><a href="<?=site_url();?>about">About This Repository</a></h3>
                         <p>   More information about this site.  </p>
                         </p>
                     </div>

@@ -21,7 +21,7 @@
   <link rel="stylesheet" href="<?=base_url();?>assets/css/aos.css">
 
   <!-- MAIN CSS -->
-  <link rel="stylesheet" href="<?=base_url();?>assets/css/style.css?ver=2.1">
+  <link rel="stylesheet" href="<?=base_url();?>assets/css/style.css?ver=2.3">
 
 </head>
 
@@ -44,7 +44,7 @@
 
           <div class="col-8">
             <div class="site-logo">
-            <a href="<?=site_url();?>"><img src="<?=base_url();?>assets/img/repologos.png" /></a> 
+            <a href="<?=site_url();?>"><img src="<?=base_url();?>assets/img/repologo.png" /></a> 
               <!-- <a href="<?=site_url();?>home"><strong>Repository UNLA</strong></a> -->
             </div>
           </div>
@@ -55,9 +55,10 @@
 
             <nav class="site-navigation text-right ml-auto d-none d-lg-block" role="navigation">
               <ul class="site-menu main-menu js-clone-nav ml-auto ">
-                <li><a href="<?=site_url();?>home" class="nav-link">Home</a></li>
+                <li><a href="<?=site_url();?>home" class="nav-link ">Home</a></li>
                 <li><a href="<?=site_url();?>browse" class="nav-link">Browse</a></li>
                 <li><a href="<?=site_url();?>search" class="nav-link">Search</a></li>
+                <li><a href="<?=site_url();?>about" class="nav-link">About</a></li>
               </ul>
             </nav>
           </div>

@@ -47,6 +47,9 @@ class PublicModel extends CI_Model {
     }
 
     public function getAllSubject() {
+        $this->db->select("subject.subject_id, subject_name, count(repo_id) as total");
+        $this->db->join($this->tb_repo, $this->tb_subject.'.subject_id = '. $this->tb_repo.'.subject_id', 'left');
+        $this->db->group_by($this->tb_subject.".subject_id");
         return $this->db->get($this->tb_subject)->result();
     }
 

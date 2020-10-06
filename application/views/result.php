@@ -1,10 +1,16 @@
-    <div class="site-section " id="contact-section">
-        <div class="container">
-            <div class="row">
-                <h3>Browse</h3>
-                <?php foreach($results as $result) { ?>
-                    <p><?=$result->author;?>, <?=year($result->date);?> <a href="<?=site_url().'view/'.$result->repo_id;?>"><?=$result->title;?></a> <?=ucfirst($result->subject_name);?></p>
-                <?php } ?>
+<div class="site-section">
+    <div class="container h-100">
+        <div class="row mb-4">
+            <div class="col-6">
+                <div class="heading">
+                    <h2>Browse </h2>
+                </div>
             </div>
         </div>
+        <?php foreach($results as $result) { ?>
+        <p><?=$result->author;?>, <?=year($result->date);?> <em><a
+                    href="<?=site_url().'view/'.$result->repo_id;?>"><?=$result->title;?></a></em>
+            <?=ucfirst($result->subject_name);?></p>
+        <?php } ?>
     </div>
+</div>

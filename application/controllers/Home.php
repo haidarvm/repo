@@ -13,4 +13,9 @@ class Home extends CI_Controller {
         $data['repos'] = $this->mpublic->getLast(10);
         $this->load->template('home', $data);
     }
+
+    public function about() {
+        $data['title'] = "Tentang";
+        $this->load->template('about', $data);
+    }
 }

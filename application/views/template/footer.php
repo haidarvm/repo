@@ -1,37 +1,34 @@
-<footer class="site-footer">
+<footer class="site-footer bg-primary py-5 cta">
     <div class="container">
         <div class="row">
-            <div class="col-lg-3">
-                <h2 class="footer-heading mb-4">Tentang Kami</h2>
-                <p>Repository ILMU SOSIAL DAN ILMU POLITIK Universitas Langlangbuana </p>
-
+            <div class="col-lg-6">
+                <h2 class="footer-heading mb-4 text-white">Tentang Kami</h2>
+                <p class="text-white">REPOSITORY FAKULTAS ILMU SOSIAL DAN ILMU POLITIK UNIVERSITAS LANGLANGBUANA </p>
             </div>
-            <div class="col-lg-8 ml-auto">
-                <div class="row">
+            <div class="col-lg-6 ml-auto">
+                <div class="row ">
                     <div class="col-lg-3">
-                        <h2 class="footer-heading mb-4">Menu</h2>
-                        <ul class="list-unstyled">
-                            <li><a href="<?=site_url();?>home">Home</a></li>
-                            <li><a href="<?=site_url();?>browse">Browse</a></li>
-                            <li><a href="<?=site_url();?>search">Search</a></li>
+                        <h2 class="footer-heading mb-4 text-white">Menu</h2>
+                        <ul class="list-unstyled ">
+                            <li><a href="<?=site_url();?>home" class="text-white">Home</a></li>
+                            <li><a href="<?=site_url();?>browse" class="text-white">Browse</a></li>
+                            <li><a href="<?=site_url();?>search" class="text-white">Search</a></li>
+                            <li><a href="<?=site_url();?>about" class="text-white">About</a></li>
                         </ul>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="row pt-5 mt-5 text-center">
+        <div class="row text-center">
             <div class="col-md-12">
-                <div class="border-top pt-5">
-                    <p>
-                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                <div class="border-top">
+                    <p  class="text-white">
                         Copyright &copy; <script>
                         document.write(new Date().getFullYear());
-                        </script> Universitas Langlangbuana </a>
-                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                        </script> UNIVERSITAS LANGLANGBUANA </a>
                     </p>
                 </div>
             </div>
-
         </div>
     </div>
 </footer>
