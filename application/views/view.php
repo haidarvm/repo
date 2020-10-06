@@ -1,13 +1,15 @@
 <div class="site-section">
     <div class="container ">
         <div class="row ">
-            <h5><?=$repo->title;?></h5>
+            <div class="col">
+                <h5><?=$repo->title;?></h5>
+            </div>
         </div>
         <div class="col-lg-4">
             <div class="box small h-100 mb-4">
                 <?php foreach($files as $file) { ?>
                 <div class="d-flex align-items-center mb-2">
-                    <div class="img"><img src="<?=base_url();?>assets/img/DOC.png"  alt="doc">
+                    <div class="img"><img src="<?=base_url();?>assets/img/DOC.png" alt="doc">
                     </div>
                     <div class="text">
                         <a href="#" class="category"><?=$file->file_ext;?></a>
@@ -19,7 +21,9 @@
             </div>
         </div>
         <div class="row">
-            <p>Abstract</p>
+            <div class="col">
+                <p>Abstract</p>
+            </div>
         </div>
         <div class="row">
             <p><?=$repo->abstract;?></p>
