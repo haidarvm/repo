@@ -156,7 +156,6 @@
                         <img src="<?=base_url();?>assets/img/DOC2.png" alt="repo">
                         <div class="author-name">
                             <span class="d-block"><?=$repo->author;?></span>
-                            <span>Owner, Ford</span>
                         </div>
                     </div>
                 </div>
