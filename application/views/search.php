@@ -54,8 +54,8 @@
                     <div class="form-group row ">
                         <label for="inputTitle" class="col-sm-2 col-form-label">Date</label>
                         <div class="col-sm-10">
-                            <input type="text" data-date-format="yyyy-mm-dd" name="date" value=""
-                                class="form-control datepicker" id="inputTitle">
+                            <input type="text" data-date-format="yyyy" name="date" value=""
+                                class="form-control yearpicker" id="inputTitle">
                             <div class="input-group-addon">
                                 <span class="glyphicon glyphicon-th"></span>
                             </div>

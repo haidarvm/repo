@@ -90,6 +90,12 @@ function errorHandler(event) {
 function abortHandler(event) {
     _("status").innerHTML = "Upload Aborted";
 }
+
+$(".yearpicker").datepicker({
+    format: "yyyy",
+    viewMode: "years", 
+    minViewMode: "years"
+});
 </script>
 </body>
 
