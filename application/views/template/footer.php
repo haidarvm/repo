@@ -11,9 +11,9 @@
                     <div class="col-lg-3">
                         <h2 class="footer-heading mb-4">Menu</h2>
                         <ul class="list-unstyled">
-                            <li><a href="#">Home</a></li>
-                            <li><a href="#">Browse</a></li>
-                            <li><a href="#">Search</a></li>
+                            <li><a href="<?=site_url();?>home">Home</a></li>
+                            <li><a href="<?=site_url();?>browse">Browse</a></li>
+                            <li><a href="<?=site_url();?>search">Search</a></li>
                         </ul>
                     </div>
                 </div>
