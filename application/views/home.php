@@ -24,7 +24,7 @@
                     <?php 
                     $i = 0;
                     foreach ($repos as $repo) {
-                        if ($i++ < 4) {?>
+                        if ($i++ < 3) {?>
                     <div class="d-flex align-items-center mb-2">
                         <div class="img"><img src="<?=base_url();?>assets/img/DOC.png" alt="doc">
                         </div>
@@ -100,7 +100,7 @@
                 <?php 
                 $i = 0; 
                 foreach ($repos as $repo) {
-                    if ($i++ < 4) {?>
+                    if ($i++ < 10) {?>
                 <div class="d-flex tutorial-item mb-4">
                     <div class="img-wrap">
                         <a href="#"><img src="<?=base_url();?>assets/img/DOC2.png" alt=" Doc"></a>

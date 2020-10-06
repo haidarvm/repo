@@ -10,7 +10,7 @@ class Home extends CI_Controller {
     public function index() {
         $data['title'] = "Repository Fisip UNLA";
         $data['subjects'] = $this->mpublic->getAllSubject();
-        $data['repos'] = $this->mpublic->getLast(3);
+        $data['repos'] = $this->mpublic->getLast(10);
         $this->load->template('home', $data);
     }
 }

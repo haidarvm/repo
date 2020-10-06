@@ -35,7 +35,6 @@
         </div>
     </div>
 </footer>
-
 </div>
 
 <script src="<?=base_url();?>assets/js/jquery-3.3.1.min.js"></script>
@@ -51,6 +50,7 @@
 <script src="<?=base_url();?>assets/js/aos.js"></script>
 
 <script src="<?=base_url();?>assets/js/main.js"></script>
+<?php if (!empty($script)) { $this->load->view('template/script'); } ?>
 <script>
 
 function _(el) {

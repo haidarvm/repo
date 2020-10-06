@@ -48,8 +48,16 @@ class AdminModel extends CI_Model {
         return $this->db->get_where($this->tb_repo, ['repo_id' => $id])->row();
     }
 
+    public function getAllRepo() {
+        $this->db->limit(1000);
+        $this->db->join($this->tb_subject, $this->tb_subject.'.subject_id = '. $this->tb_repo.'.subject_id', 'inner');
+        return $this->db->get_where($this->tb_repo)->result();
+    }
+
+
     public function insertRepo($data) {
-        return $this->db->insert($this->tb_repo, $data);
+         $this->db->insert($this->tb_repo, $data);
+         return $this->db->insert_id();
     }
 
     public function updateRepo($data, $id) {
