@@ -2,7 +2,9 @@
 <html lang="en">
 
 <head>
-  <title>Repository &mdash; Universitas Langlangbuana </title>
+  <meta property="og:title" content="Repository Fisip Unla" />
+  <meta property="og:description" content="Repository Fisip Unla" />
+  <title>Repository Fisip Unla</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
