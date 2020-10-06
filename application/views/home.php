@@ -145,7 +145,7 @@
         <?php 
                 $i = 0; 
                 foreach ($repos as $repo) {
-                    if ($i++ < 4) {?>
+                    if ($i++ < 3) {?>
             <div class="col-lg-4 mb-4 mb-lg-0">
                 <div class="testimonial-2">
                     <h3 class="h5"><?=$repo->subject_name;?></h3>
