@@ -2,11 +2,9 @@
         <div class="container">
             <div class="row">
                 <h3>Browse by <?=$title;?></h3>
-            </div>
-            <ul class="list-group">
                 <?php foreach($repos as $repo) { ?>
-                <li class="list-group-item"><a href="<?=site_url().'view/'.$repo->repo_id;?>"><?=$repo->title;?></a></li>
+                <p><?=$repo->author;?><a href="<?=site_url().'view/'.$repo->repo_id;?>"><?=$repo->title;?></a>
+                    <?=$repo->date;?></p>
                 <?php } ?>
-            </ul>
+            </div>
         </div>
-    </div>

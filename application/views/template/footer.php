@@ -3,7 +3,7 @@
         <div class="row">
             <div class="col-lg-3">
                 <h2 class="footer-heading mb-4">Tentang Kami</h2>
-                <p>Repository Universitas Langlangbuana </p>
+                <p>Repository ILMU SOSIAL DAN ILMU POLITIK Universitas Langlangbuana </p>
 
             </div>
             <div class="col-lg-8 ml-auto">

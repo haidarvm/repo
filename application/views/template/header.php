@@ -8,7 +8,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+  <!-- <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet"> -->
 
   <link rel="stylesheet" href="<?=base_url();?>assets/fonts/icomoon/style.css">
   <link rel="stylesheet" href="<?=base_url();?>assets/fonts/brand/style.css">
@@ -21,7 +21,7 @@
   <link rel="stylesheet" href="<?=base_url();?>assets/css/aos.css">
 
   <!-- MAIN CSS -->
-  <link rel="stylesheet" href="<?=base_url();?>assets/css/style.css">
+  <link rel="stylesheet" href="<?=base_url();?>assets/css/style.css?ver=1.8">
 
 </head>
 
@@ -44,8 +44,8 @@
 
           <div class="col-8">
             <div class="site-logo">
-              <img src="<?=base_url();?>assets/img/logounla.png" width="100"/>
-              <a href="<?=site_url();?>home"><strong>Repository UNLA</strong></a>
+            <a href="<?=site_url();?>"><img src="<?=base_url();?>assets/img/repologos.png" /></a> 
+              <!-- <a href="<?=site_url();?>home"><strong>Repository UNLA</strong></a> -->
             </div>
           </div>
 
@@ -69,13 +69,7 @@
     </header>
 
 
-    <div class="site-section-cover overlay" style="background-image: url('<?=base_url();?>assets/images/hero_bg.jpg');">
+    <div class="site-section-cover overlay" style="background: url('<?=base_url();?>assets/img/unlagedung.jpg') top right no-repeat;">
 
-      <div class="container">
-        <div class="row align-items-center justify-content-center">
-          <div class="col-lg-10 text-center">
-            <h1><strong><?=$title;?></strong></h1>
-          </div>
-        </div>
-      </div>
+      
     </div>

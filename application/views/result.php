@@ -3,7 +3,7 @@
             <div class="row">
                 <h3>Browse</h3>
                 <?php foreach($results as $result) { ?>
-                    <p><a href="<?=site_url().'view/'.$result->repo_id;?>"><?=$result->title;?></a></p>
+                    <p><?=$result->author;?><a href="<?=site_url().'view/'.$result->repo_id;?>"><?=$result->title;?></a> <?=$result->date;?></p>
                 <?php } ?>
             </div>
         </div>

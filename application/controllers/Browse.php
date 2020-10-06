@@ -13,6 +13,12 @@ class Browse extends CI_Controller {
         $this->load->template('browse', $data);
     }
 
+    public function latest() {
+        $data['title'] = "Repository UNLA";
+        $data['results'] = $this->mpublic->getLast(50);
+        $this->load->template('result', $data);
+    }
+
     public function view($repo_id) {
         $data['title'] = "Repository UNLA";
         $data['repo'] = $this->mpublic->getRepo($repo_id);
