@@ -8,10 +8,8 @@
                                 alt="Image"></div>
                         <div class="text">
                             <a href="#" class="category">Repository</a>
-                            <h3><a href="#">Repository Universitas Langlangbuana</a></h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum quidem totam
-                                exercitationem eveniet
-                                blanditiis nulla, et possimus, itaque alias maxime!</p>
+                            <h3><a href="#">Selamat Datang Repository Universitas Langlangbuana</a></h3>
+                            <p>Selamat Datang Repository Universitas Langlangbuana Pencarian data Repository berdasarkan subject, judul, author</p>
                             <p class="meta">
                                 <span class="mr-2 mb-2"><?=date('Y-m-d')?></span>
                             </p>

@@ -8,13 +8,13 @@ class Browse extends CI_Controller {
     }
 
     public function index() {
-        $data['title'] = "Browse";
+        $data['title'] = "Repository UNLA";
         $data['subjects'] = $this->mpublic->getAllSubject();
         $this->load->template('browse', $data);
     }
 
     public function view($repo_id) {
-        $data['title'] = "Browse";
+        $data['title'] = "Repository UNLA";
         $data['repo'] = $this->mpublic->getRepo($repo_id);
         $data['files'] = $this->mpublic->getFiles($repo_id);
         $this->load->template('view', $data);

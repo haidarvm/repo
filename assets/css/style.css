@@ -451,9 +451,9 @@ h1, h2, h3, h4, h5,
   .site-navbar .site-logo {
     margin: 0;
     padding: 0;
-    font-size: 1.7rem; }
+    font-size: 1.2rem; }
     .site-navbar .site-logo strong {
-      font-weight: 900; }
+      font-weight: 400; }
     .site-navbar .site-logo a {
       color: #000; }
     @media (max-width: 991.98px) {

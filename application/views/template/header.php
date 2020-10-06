@@ -42,14 +42,14 @@
       <div class="container">
         <div class="row align-items-center position-relative">
 
-          <div class="col-6">
+          <div class="col-8">
             <div class="site-logo">
               <img src="<?=base_url();?>assets/img/logounla.png" width="100"/>
               <a href="<?=site_url();?>home"><strong>Repository UNLA</strong></a>
             </div>
           </div>
 
-          <div class="col-6  text-right">
+          <div class="col-4  text-right">
 
             <span class="d-inline-block d-lg-none"><a href="<?=site_url();?>home/#" class=" site-menu-toggle js-menu-toggle py-5 "><span class="icon-menu h3 text-black"></span></a></span>
 
