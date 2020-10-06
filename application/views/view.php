@@ -1,7 +1,7 @@
 <div class="site-section">
-    <div class="container h-100">
-        <div class="row align-items-center justify-content-center">
-            <h3><?=$repo->title;?></h3>
+    <div class="container ">
+        <div class="row ">
+            <h5><?=$repo->title;?></h5>
         </div>
         <div class="col-lg-4">
             <div class="box small h-100 mb-4">

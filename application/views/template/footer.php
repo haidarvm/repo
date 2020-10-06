@@ -21,13 +21,11 @@
         </div>
         <div class="row text-center">
             <div class="col-md-12">
-                <div class="border-top">
-                    <p  class="text-white">
-                        Copyright &copy; <script>
-                        document.write(new Date().getFullYear());
-                        </script> UNIVERSITAS LANGLANGBUANA </a>
-                    </p>
-                </div>
+                <p  class="text-white">
+                    Copyright &copy; <script>
+                    document.write(new Date().getFullYear());
+                    </script> UNIVERSITAS LANGLANGBUANA </a>
+                </p>
             </div>
         </div>
     </div>

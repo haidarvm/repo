@@ -7,10 +7,16 @@
                 </div>
             </div>
         </div>
-        <?php foreach($results as $result) { ?>
+        <?php 
+        if (count($results) > 0) {
+            foreach ($results as $result) { ?>
         <p><?=$result->author;?>, <?=year($result->date);?> <em><a
-                    href="<?=site_url().'view/'.$result->repo_id;?>"><?=$result->title;?></a></em>
+                    href="<?=site_url() . 'view/' . $result->repo_id;?>"><?=$result->title;?></a></em>
             <?=ucfirst($result->subject_name);?></p>
+        <?php }
+        } else {?>
+
+        <h2>No Result </h2>
         <?php } ?>
     </div>
 </div>

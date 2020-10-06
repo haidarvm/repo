@@ -60,7 +60,9 @@ class PublicModel extends CI_Model {
         !empty($data['keyword']) ? $this->db->or_like('keyword', $data['keyword']) : "";
         !empty($data['date']) ? $this->db->where('date', $data['date']) : "";
         $this->db->join($this->tb_subject, $this->tb_subject.'.subject_id = '. $this->tb_repo.'.subject_id', 'inner');
-        return $this->db->get($this->tb_repo)->result();
+        $query = $this->db->get($this->tb_repo);
+       
+        return $query->result();
     }
 
     

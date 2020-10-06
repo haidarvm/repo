@@ -17,7 +17,7 @@ class Search extends CI_Controller {
     public function post() {
         $post = $this->input->post();
         $data['title'] = "Result";
-        $data['results'] = $this->mpublic->search($post);
+         $data['results'] = $this->mpublic->search($post);
         $this->load->template('result', $data);
     }
 }
