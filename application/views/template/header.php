@@ -21,7 +21,7 @@
   <link rel="stylesheet" href="<?=base_url();?>assets/css/aos.css">
 
   <!-- MAIN CSS -->
-  <link rel="stylesheet" href="<?=base_url();?>assets/css/style.css?ver=1.8">
+  <link rel="stylesheet" href="<?=base_url();?>assets/css/style.css?ver=2.0">
 
 </head>
 

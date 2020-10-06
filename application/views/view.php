@@ -4,7 +4,7 @@
             <h3><?=$repo->title;?></h3>
         </div>
         <div class="col-lg-4">
-            <div class="box small h-100">
+            <div class="box small h-100 mb-4">
                 <?php foreach($files as $file) { ?>
                 <div class="d-flex align-items-center mb-2">
                     <div class="img"><img src="<?=base_url();?>assets/img/DOC.png"  alt="doc">

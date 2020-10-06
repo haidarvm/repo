@@ -16,6 +16,15 @@ function fileFullPath() {
     return  createFilePath();
 }
 
+function indoDate($date) {
+    return date('d-m-Y', strtotime($date));
+}
+
+
+function year($date) {
+    return date('Y', strtotime($date));
+}
+
 function createFilePath() {
     $path = FCPATH . 'assets/files/';
 
