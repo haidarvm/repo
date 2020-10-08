@@ -2,7 +2,7 @@
     <div class="container h-100">
         <div class="row h-100 justify-content-center align-items-center">
 
-          <div class="col-10">
+          <div class="col-12">
                     <div class="heading mb-4">
                         <h2>Browse by Subject</h2>
                         <p>Please select a value to browse from the list below.</p>
@@ -10,7 +10,7 @@
                 </div>
             </div>
         <div class="row h-100 justify-content-center align-items-center">
-                <div class="col-10">
+                <div class="col-12">
                     <div class="categories">
                         <?php foreach ($subjects as $subject) { ?>
                         <li><a

@@ -2,13 +2,13 @@
 <div class="site-section bg-light">
     <div class="container h-100">
         <div class="row h-100 justify-content-center align-items-center">
-            <div class="col-10">
+            <div class="col-12">
                 <div class="heading mb-4">
                     <!-- <span class="caption">Latest</span> -->
                     <h2> Selamat Datang di Repository FISIP UNLA </h2>
                 </div>
             </div>
-            <div class="col-10">
+            <div class="col-12">
                 <div class="d-flex tutorial-item mb-2">
                     <div class="img-wrap">
                         <a href="<?=site_url();?>browse/latest"><img src="<?=base_url();?>assets/img/DOC.png" alt=" Doc"></a>
