@@ -1,7 +1,7 @@
     <div class="site-section">
         <div class="container">
             <div class="row align-items-center justify-content-center">
-                <div class="col-10">
+                <div class="col-12">
                     <div class="heading mb-4">
                         <span class="caption">About us</span>
                         <h2>ABOUT REPOSITORY FISIP UNLA</h2>
