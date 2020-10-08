@@ -21,7 +21,7 @@
                 </div>
                 <div class="d-flex tutorial-item mb-2">
                     <div class="img-wrap">
-                        <a href="<?=site_url();?>search"><img src="<?=base_url();?>assets/img/DOC.png" alt=" Doc"></a>
+                        <a href="<?=site_url();?>search"><img src="<?=base_url();?>assets/img/search.png" width="50" alt=" Doc"></a>
                     </div>
                     <div>
                         <h3><a href="<?=site_url();?>search">Search Repository</a></h3>
@@ -31,7 +31,7 @@
                 </div>
                 <div class="d-flex tutorial-item mb-2">
                     <div class="img-wrap">
-                        <a href="<?=site_url();?>browse"><img src="<?=base_url();?>assets/img/DOC.png" alt=" Doc"></a>
+                        <a href="<?=site_url();?>browse"><img src="<?=base_url();?>assets/img/browse.png" width="50" alt=" Doc"></a>
                     </div>
                     <div>
                         <h3><a href="<?=site_url();?>browse">Browse Repository</a></h3>
@@ -41,7 +41,7 @@
                 </div>
                 <div class="d-flex tutorial-item mb-2">
                     <div class="img-wrap">
-                        <a href="<?=site_url();?>about"><img src="<?=base_url();?>assets/img/DOC.png" alt=" Doc"></a>
+                        <a href="<?=site_url();?>about"><img src="<?=base_url();?>assets/img/about.png" width="50" alt=" Doc"></a>
                     </div>
                     <div>
                         <h3><a href="<?=site_url();?>about">About This Repository</a></h3>
@@ -51,7 +51,7 @@
                 </div>
                 <div class="d-flex tutorial-item mb-2">
                     <div class="img-wrap">
-                        <a href="#"><img src="<?=base_url();?>assets/img/DOC.png" alt=" Doc"></a>
+                        <a href="#"><img src="<?=base_url();?>assets/img/policy.png" alt=" Doc"></a>
                     </div>
                     <div>
                         <h3><a href="#">Repository Policies</a></h3>
