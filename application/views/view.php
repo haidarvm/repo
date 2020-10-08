@@ -2,7 +2,9 @@
     <div class="container ">
         <div class="row ">
             <div class="col">
-                <h5><?=$repo->title;?></h5>
+                <h2 class="text-dark"><?=$repo->title;?></h2>
+                <p><?=$repo->author;?>, <?=year($repo->date);?> <em><?=$repo->title;?></em>
+            <?=ucfirst($repo->subject_name);?></p>
             </div>
         </div>
         <div class="col-lg-4">
