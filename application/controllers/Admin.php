@@ -63,7 +63,7 @@ class Admin extends CI_Controller {
                 $data['type_id'] = 1;
                 $data['user_id'] = 1;
                 $data['date'] = '2019-10-10';
-                $repo_id = $this->madmin->insertRepo($data);
+                // $repo_id = $this->madmin->insertRepo($data);
                 echo '<ul>';
                 echo "<li>". $fileinfo->getFilename() . '</li>';
                 foreach ($indir as $in) {
@@ -72,9 +72,9 @@ class Admin extends CI_Controller {
                     $filename = str_replace('%20', ' ' , substr($url, strrpos($url, '/') + 1));
                     $ext = getFileExt($filename);
                     $newname = getFileName($filename). $suff.$ext;
-                    $files = ['filename' => $newname, 'full_path' => filePath(), 'original_name' => $filename, 'file_ext' => $ext, 'repo_id' => $repo_id]; 
-                    $this->madmin->insertFile($files);
-                    copy( $url, FCPATH.'/assets/files/'. filePath() . $newname);
+                    // $files = ['filename' => $newname, 'full_path' => filePath(), 'original_name' => $filename, 'file_ext' => $ext, 'repo_id' => $repo_id]; 
+                    // $this->madmin->insertFile($files);
+                    // copy( $url, FCPATH.'/assets/files/'. filePath() . $newname);
                     echo '<li>' . $url . '</li>';
                 }
                 echo '</ul>';
