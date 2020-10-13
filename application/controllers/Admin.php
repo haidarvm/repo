@@ -62,7 +62,7 @@ class Admin extends CI_Controller {
                 $data['subject_id'] = 1;
                 $data['type_id'] = 1;
                 $data['user_id'] = 1;
-                $data['date'] = 2019-10-10;
+                $data['date'] = '2019-10-10';
                 $repo_id = $this->madmin->insertRepo($data);
                 echo '<ul>';
                 echo "<li>". $fileinfo->getFilename() . '</li>';
