@@ -27,6 +27,7 @@ class PublicModel extends CI_Model {
 
     public function getBy($by, $type) {
         $this->db->join($this->tb_subject, $this->tb_subject.'.subject_id = '. $this->tb_repo.'.subject_id', 'inner');
+        $this->db->order_by('author', 'ASC');
         $query = $this->db->get_where($this->tb_repo, [$this->tb_repo.'.'.$by => $type]);
         return $query->result();
     }
