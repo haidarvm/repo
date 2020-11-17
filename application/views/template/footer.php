@@ -23,7 +23,7 @@
                 <p  class="text-white">
                     Copyright &copy; <script>
                     document.write(new Date().getFullYear());
-                    </script> UNIVERSITAS LANGLANGBUANA </a>
+                    </script> UNIVERSITAS LANGLANGBUANA 
                 </p>
             </div>
         </div>
