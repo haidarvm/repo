@@ -21,7 +21,7 @@
                         <td><?=$repo->title;?></td>
                         <td><?=$repo->subject_name;?></td>
                         <td><?=$repo->date;?></td>
-                        <td>Edit</td>
+                        <td><a href="<?=base_url().'admin/update/'.$repo->repo_id?>"> Edit</a></td>
                     </tr>
                     <?php } ?>
                 </tbody>

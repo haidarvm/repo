@@ -36,6 +36,7 @@ class PublicModel extends CI_Model {
         $this->db->limit($limit);
         $this->db->join($this->tb_type, $this->tb_type.'.type_id = '. $this->tb_repo.'.type_id', 'inner');
         $this->db->join($this->tb_subject, $this->tb_subject.'.subject_id = '. $this->tb_repo.'.subject_id', 'inner');
+        $this->db->order_by('repo_id', 'DESC');
         return $this->db->get($this->tb_repo)->result();
     }
 
