@@ -53,3 +53,11 @@ function getFileNameExt($filecomplete) {
 function getFileExt($filecomplete) {
     return '.' . pathinfo($filecomplete, PATHINFO_EXTENSION);
 }
+
+function notallowed($filename) {
+    if(preg_match('(BAB III|BAB IV|BAB V)', $filename) === 1) {
+        return false;
+     }  else  {
+         return true;
+     }
+}
