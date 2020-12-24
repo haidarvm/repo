@@ -44,13 +44,17 @@ class Browse extends CI_Controller {
         $data['repos'] = $this->mpublic->getByYear($year);
         $this->load->template('by', $data);
     }
-
+    
     public function download($file_id) {
         $this->load->helper('download');
         $file = $this->mpublic->getFile($file_id);
-        $filefull = filePaths().$file->full_path.$file->filename;
-        echo $filefull;
-        force_download($filefull, NULL);
+        if(notallowed($file->filename)) {
+            $filefull = filePaths().$file->full_path.$file->filename;
+            echo $filefull;
+            force_download($filefull, NULL);
+        } else {
+            echo 'Maaf akses tidak di Izinkan';
+        }
     }
 
 }
