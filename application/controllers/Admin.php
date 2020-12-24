@@ -51,7 +51,7 @@ class Admin extends Admin_Controller {
         redirect('admin/update/' . $repo_id);
     }
 
-    public function batch() {
+    public function batch__() {
         $directory = FCPATH.'assets/judul';
         $dir = new RecursiveDirectoryIterator($directory, RecursiveDirectoryIterator::SKIP_DOTS);
         foreach ($dir as $fileinfo) {
