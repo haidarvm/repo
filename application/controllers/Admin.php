@@ -75,7 +75,7 @@ class Admin extends Admin_Controller {
                     $newname = getFileName($filename). $suff.$ext;
                     $files = ['filename' => $newname, 'full_path' => filePath(), 'original_name' => $filename, 'file_ext' => $ext, 'repo_id' => $repo_id]; 
                     $this->madmin->insertFile($files);
-                    copy( $url, FCPATH.'/assets/files/'. filePath() . $newname);
+                    copy( $url, FCPATH.'assets/files/'. filePath() . $newname);
                     echo '<li>' . $url . '</li>';
                 }
                 echo '</ul>';

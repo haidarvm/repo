@@ -11,7 +11,7 @@
             <div class="box small h-100 mb-4">
                 <?php foreach($files as $file) { ?>
                 <div class="d-flex align-items-center mb-2">
-                    <div class="img"><img src="<?=base_url();?>assets/img/DOC.png" alt="doc">
+                    <div class="img"><img src="<?=base_url();?>assets/img/PDF.png" alt="doc">
                     </div>
                     <div class="text">
                         <a href="#" class="category"><?=$file->file_ext;?></a>
