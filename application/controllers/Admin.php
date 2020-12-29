@@ -51,7 +51,7 @@ class Admin extends Admin_Controller {
         redirect('admin/update/' . $repo_id);
     }
 
-    public function batch__() {
+    public function batch() {
         $directory = FCPATH.'assets/judul';
         $dir = new RecursiveDirectoryIterator($directory, RecursiveDirectoryIterator::SKIP_DOTS);
         foreach ($dir as $fileinfo) {
@@ -62,8 +62,9 @@ class Admin extends Admin_Controller {
                 $data['subject_id'] = 1;
                 $data['type_id'] = 1;
                 $data['user_id'] = 1;
-                $data['date'] = '2019-10-10';
-                // $repo_id = $this->madmin->insertRepo($data);
+                // $data['date'] = '2019-10-10';
+                $data['date'] = $repo[1]. '-01-01';
+                $repo_id = $this->madmin->insertRepo($data);
                 echo '<ul>';
                 echo "<li>". $fileinfo->getFilename() . '</li>';
                 foreach ($indir as $in) {
@@ -72,9 +73,9 @@ class Admin extends Admin_Controller {
                     $filename = str_replace('%20', ' ' , substr($url, strrpos($url, '/') + 1));
                     $ext = getFileExt($filename);
                     $newname = getFileName($filename). $suff.$ext;
-                    // $files = ['filename' => $newname, 'full_path' => filePath(), 'original_name' => $filename, 'file_ext' => $ext, 'repo_id' => $repo_id]; 
-                    // $this->madmin->insertFile($files);
-                    // copy( $url, FCPATH.'/assets/files/'. filePath() . $newname);
+                    $files = ['filename' => $newname, 'full_path' => filePath(), 'original_name' => $filename, 'file_ext' => $ext, 'repo_id' => $repo_id]; 
+                    $this->madmin->insertFile($files);
+                    copy( $url, FCPATH.'/assets/files/'. filePath() . $newname);
                     echo '<li>' . $url . '</li>';
                 }
                 echo '</ul>';
