@@ -16,7 +16,7 @@ class Browse extends CI_Controller {
 
     public function latest() {
         $data['title'] = "Repository UNLA";
-        $data['results'] = $this->mpublic->getLast(50);
+        $data['results'] = $this->mpublic->getLast(100);
         $this->load->template('result', $data);
     }
 
