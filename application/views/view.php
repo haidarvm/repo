@@ -15,7 +15,7 @@
                     </div>
                     <div class="text">
                         <a href="#" class="category"><?=$file->file_ext;?></a>
-                        <h3><a href="#"><?=$file->original_name;?></a></h3>
+                        <h3><a href="<?=site_url().'browse/download/'.$file->file_id;?>"><?=$file->original_name;?></a></h3>
                         <p><a href="<?=site_url().'browse/download/'.$file->file_id;?>">Download</a></h3>
                     </div>
                 </div>
@@ -36,6 +36,14 @@
             </div>
             <div class="col-6">
                 <?=$repo->author;?>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-2">
+                Prodi Type:
+            </div>
+            <div class="col-6">
+                <?=$repo->prodi_name;?>
             </div>
         </div>
         <div class="row">

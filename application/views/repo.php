@@ -37,6 +37,25 @@
                         </div>
                     </div>
                     <div class="form-group row">
+                        <label for="inputTitle" class="col-sm-2 col-form-label">Prodi</label>
+                        <div class="col-sm-10">
+                            <div class="row">
+                                <?php foreach($prodis as $prodi) { ?>
+                                <div class="col-sm-4">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="prodi_id" id="prodi_id"
+                                            value="<?=$prodi->prodi_id;?>"
+                                            <?php echo !empty($repo->prodi_id) &&  $prodi->prodi_id == $repo->prodi_id ? "checked" : ""; ?>>
+                                        <label class="form-check-label" for="type_id">
+                                            <?=$prodi->prodi_name;?>
+                                        </label>
+                                    </div>
+                                </div>
+                                <?php } ?>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group row">
                         <label for="inputTitle" class="col-sm-2 col-form-label">Subject</label>
                         <div class="col-sm-10">
                             <div class="row">

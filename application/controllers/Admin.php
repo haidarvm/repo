@@ -25,6 +25,7 @@ class Admin extends Admin_Controller {
         $data['title'] = 'Repository';
         $data['repo_id'] = $id;
         $data['types'] = $this->madmin->getAllType();
+        $data['prodis'] = $this->madmin->getAllProdi();
         $data['subjects'] = $this->madmin->getAllSubject();
         $this->load->template('repo', $data);
     }
@@ -33,6 +34,7 @@ class Admin extends Admin_Controller {
         $data['title'] = 'Repository';
         $data['repo_id'] = $id;
         $data['types'] = $this->madmin->getAllType();
+        $data['prodis'] = $this->madmin->getAllProdi();
         $data['subjects'] = $this->madmin->getAllSubject();
         $data['repo'] = $this->madmin->getRepo($id);
         $data['files'] = $this->madmin->getFiles($id);

@@ -33,6 +33,25 @@
                             </div>
                         </div>
                     </div>
+
+                    <div class="form-group row">
+                        <label for="inputTitle" class="col-sm-2 col-form-label">Prodi</label>
+                        <div class="col-sm-10">
+                            <div class="row">
+                                <?php foreach($prodis as $prodi) { ?>
+                                <div class="col-sm-4">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" name="prodi_name" id="prodi_name"
+                                            value="<?=$prodi->prodi_id;?>">
+                                        <label class="form-check-label" for="prodi_name">
+                                            <?=$prodi->prodi_name;?>
+                                        </label>
+                                    </div>
+                                </div>
+                                <?php } ?>
+                            </div>
+                        </div>
+                    </div>
                     <div class="form-group row">
                         <label for="inputTitle" class="col-sm-2 col-form-label">Subject</label>
                         <div class="col-sm-10">

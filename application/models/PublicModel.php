@@ -9,6 +9,7 @@ class PublicModel extends CI_Model {
     private $tb_type = 'type';
     private $tb_subject = 'subject';
     private $tb_files = 'files';
+    private $tb_prodi = 'prodi';
 
     public function __construct() {
         parent::__construct();
@@ -18,7 +19,12 @@ class PublicModel extends CI_Model {
         return $this->db->get($this->tb_type)->result();
     }
 
+    public function getAllProdi() {
+        return $this->db->get($this->tb_prodi)->result();
+    }
+
     public function getRepo($repo_id) {
+        $this->db->join($this->tb_prodi, $this->tb_prodi.'.prodi_id = '. $this->tb_repo.'.prodi_id', 'inner');
         $this->db->join($this->tb_type, $this->tb_type.'.type_id = '. $this->tb_repo.'.type_id', 'inner');
         $this->db->join($this->tb_subject, $this->tb_subject.'.subject_id = '. $this->tb_repo.'.subject_id', 'inner');
         $query = $this->db->get_where($this->tb_repo, [$this->tb_repo.'.repo_id' => $repo_id]);
@@ -34,6 +40,7 @@ class PublicModel extends CI_Model {
 
     public function getLast($limit) {
         $this->db->limit($limit);
+        $this->db->join($this->tb_prodi, $this->tb_prodi.'.prodi_id = '. $this->tb_repo.'.prodi_id', 'inner');
         $this->db->join($this->tb_type, $this->tb_type.'.type_id = '. $this->tb_repo.'.type_id', 'inner');
         $this->db->join($this->tb_subject, $this->tb_subject.'.subject_id = '. $this->tb_repo.'.subject_id', 'inner');
         $this->db->order_by('repo_id', 'DESC');
@@ -56,11 +63,13 @@ class PublicModel extends CI_Model {
     }
 
     public function search($data) {
+        !empty($data['prodi']) ? $this->db->like('prodi_name', $data['prodi_name']) : "";
         !empty($data['title']) ? $this->db->like('title', $data['title']) : "";
         !empty($data['abstract']) ? $this->db->or_like('abstract', $data['abstract']) : "";
         !empty($data['author']) ? $this->db->or_like('author', $data['author']) : "";
         !empty($data['keyword']) ? $this->db->or_like('keyword', $data['keyword']) : "";
         !empty($data['date']) ? $this->db->where('YEAR(date)', $data['date']) : "";
+        $this->db->join($this->tb_prodi, $this->tb_prodi.'.prodi_id = '. $this->tb_repo.'.prodi_id', 'inner');
         $this->db->join($this->tb_subject, $this->tb_subject.'.subject_id = '. $this->tb_repo.'.subject_id', 'inner');
         $query = $this->db->get($this->tb_repo);
        

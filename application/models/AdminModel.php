@@ -9,6 +9,7 @@ class AdminModel extends CI_Model {
     private $tb_type = 'type';
     private $tb_subject = 'subject';
     private $tb_files = 'files';
+    private $tb_prodi = 'prodi';
 
     public function __construct() {
         parent::__construct();
@@ -34,6 +35,10 @@ class AdminModel extends CI_Model {
 
     public function getAllType() {
         return $this->db->get($this->tb_type)->result();
+    }
+
+    public function getAllProdi() {
+        return $this->db->get($this->tb_prodi)->result();
     }
 
     public function getAllSubject() {

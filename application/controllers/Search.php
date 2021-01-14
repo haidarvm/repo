@@ -11,6 +11,7 @@ class Search extends CI_Controller {
         $data['title'] = "Browse";
         $data['types'] = $this->mpublic->getAllType();
         $data['subjects'] = $this->mpublic->getAllSubject();
+        $data['prodis'] = $this->mpublic->getAllProdi();
         $this->load->template('search', $data);
     }
 
