@@ -24,7 +24,7 @@ class PublicModel extends CI_Model {
     }
 
     public function getRepo($repo_id) {
-        $this->db->join($this->tb_prodi, $this->tb_prodi.'.prodi_id = '. $this->tb_repo.'.prodi_id', 'inner');
+        $this->db->join($this->tb_prodi, $this->tb_prodi.'.prodi_id = '. $this->tb_repo.'.prodi_id', 'left');
         $this->db->join($this->tb_type, $this->tb_type.'.type_id = '. $this->tb_repo.'.type_id', 'inner');
         $this->db->join($this->tb_subject, $this->tb_subject.'.subject_id = '. $this->tb_repo.'.subject_id', 'inner');
         $query = $this->db->get_where($this->tb_repo, [$this->tb_repo.'.repo_id' => $repo_id]);
@@ -69,7 +69,7 @@ class PublicModel extends CI_Model {
         !empty($data['author']) ? $this->db->or_like('author', $data['author']) : "";
         !empty($data['keyword']) ? $this->db->or_like('keyword', $data['keyword']) : "";
         !empty($data['date']) ? $this->db->where('YEAR(date)', $data['date']) : "";
-        $this->db->join($this->tb_prodi, $this->tb_prodi.'.prodi_id = '. $this->tb_repo.'.prodi_id', 'inner');
+        $this->db->join($this->tb_prodi, $this->tb_prodi.'.prodi_id = '. $this->tb_repo.'.prodi_id', 'left');
         $this->db->join($this->tb_subject, $this->tb_subject.'.subject_id = '. $this->tb_repo.'.subject_id', 'inner');
         $query = $this->db->get($this->tb_repo);
        
