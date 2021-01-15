@@ -17,7 +17,7 @@
                             </div>
                             <div class="text">
                                 <?php  if($this->session->userdata('login')) { ?>
-                                    <?php  if(strtolower($file->file_ext == ".pdf")) { ?>
+                                    <?php  if(strtolower($file->file_ext) == ".pdf") { ?>
                                         <button type="button" class="btn btn-primary" data-toggle="modal"
                                             data-target="#preview_<?=$file->file_id; ?>">Preview</button>
                                     <?php  } ?>
@@ -34,8 +34,8 @@
                                 </h3>
                             </div>
                         </div>
+                        <?php  if(strtolower($file->file_ext) == ".pdf") {?>
                         <!-- Modal -->
-                        <?php  if(strtolower($file->file_ext == ".pdf")) { ?>
                             <div class="modal fade" id="preview_<?=$file->file_id;?>" tabindex="-1" role="dialog"
                                 aria-labelledby="exampleModalLabel" aria-hidden="true">
                                 <div class="modal-dialog modal-lg" role="document">
@@ -68,7 +68,7 @@
                                     </div>
                                 </div>
                             </div>
-                        <?php  } ?>
+                        <?php  }  ?>
                     <?php } ?>
                 </div>
                 <!-- Button trigger modal -->
