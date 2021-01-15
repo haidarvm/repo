@@ -10,15 +10,27 @@
         <div class="col-lg-4">
             <div class="box small h-100 mb-4">
                 <?php foreach($files as $file) { ?>
-                <div class="d-flex align-items-center mb-2">
-                    <div class="img"><img src="<?=base_url();?>assets/img/PDF.png" alt="doc">
+                    <div class="d-flex align-items-center mb-2">
+                        <div class="img"><img src="<?=base_url();?>assets/img/PDF.png" alt="doc">
+                        </div>
+                        <div class="text">
+                            <?php  if($this->session->userdata('login')) { ?>
+
+                            <button type="button" class="btn btn-primary" data-toggle="modal"
+                                data-target="#preview_<?=$file->file_id; ?>">Preview</button>
+                            <p><a href="<?=site_url() . 'browse/download/' . $file->file_id; ?>">Download</a></h3>
+                                <?php  } else {?>
+                                <?php if (notallowed($file->filename)) {  ?>
+                                <button type="button" class="btn btn-primary" data-toggle="modal"
+                                    data-target="#preview_<?=$file->file_id; ?>">Preview</button>
+                            <p><a href="<?=site_url() . 'browse/download/' . $file->file_id; ?>">Download</a></h3>
+                                <?php  } }?>
+                                <a href="#" class="category"><?=$file->file_ext; ?></a>
+                            <h3><a
+                                    href="<?=site_url() . 'browse/download/' . $file->file_id; ?>"><?=$file->original_name; ?></a>
+                            </h3>
+                        </div>
                     </div>
-                    <div class="text">
-                        <a href="#" class="category"><?=$file->file_ext;?></a>
-                        <h3><a href="<?=site_url().'browse/download/'.$file->file_id;?>"><?=$file->original_name;?></a></h3>
-                        <p><a href="<?=site_url().'browse/download/'.$file->file_id;?>">Download</a></h3>
-                    </div>
-                </div>
                 <?php } ?>
             </div>
         </div>

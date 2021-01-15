@@ -48,13 +48,46 @@ class Browse extends CI_Controller {
     public function download($file_id) {
         $this->load->helper('download');
         $file = $this->mpublic->getFile($file_id);
-        if(notallowed($file->filename)) {
+        if ($this->session->userdata('login'))  {
             $filefull = filePaths().$file->full_path.$file->filename;
             echo $filefull;
             force_download($filefull, NULL);
         } else {
-            echo 'Maaf akses tidak di Izinkan';
+            if(notallowed($file->filename)) {
+                $filefull = filePaths().$file->full_path.$file->filename;
+                echo $filefull;
+                force_download($filefull, NULL);
+            } else {
+                echo 'Maaf akses tidak di Izinkan';
+            }
         }
+    }
+
+    public function previews($file_id) {
+        $file = $this->mpublic->getFile($file_id);
+        $filefull = filePaths().$file->full_path.$file->filename;
+        header('content-type: application/pdf');
+        readfile($filefull);
+        // echo $filefull;
+    }
+
+    public function preview($file_id) {
+        $file = $this->mpublic->getFile($file_id);
+        $filefull = filePaths().$file->full_path.$file->filename;
+        // $pdf = "filename.pdf";
+        $im = new Imagick();
+        $im->setResolution(300, 300);     //set the resolution of the resulting jpg
+        $im->readImage($filefull.'[0]');    //[0] for the first page
+        $im->setImageFormat('jpg');
+        header('Content-Type: image/jpeg');
+        echo $im;
+        // $im = new imagick($filefull);
+        // $im->scaleImage(0,300); 
+        // $im->setIteratorIndex(0);// rewind to first page or image of a multi series
+        // $im->setImageCompressionQuality();
+        // $im->setImageFormat('jpg');
+        // header('Content-Type: image/jpeg');
+        // echo $im;
     }
 
 }
