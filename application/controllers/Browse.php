@@ -33,6 +33,12 @@ class Browse extends CI_Controller {
         $this->load->template('by', $data);
     }
 
+    public function prodi($prodi_id) {
+        $data['title'] = "Prodi";
+        $data['repos'] = $this->mpublic->getAllByProdi($prodi_id);
+        $this->load->template('by', $data);
+    }
+
     public function type($type_id) {
         $data['title'] = "Type";
         $data['repos'] = $this->mpublic->getBy("type_id",$type_id);

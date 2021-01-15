@@ -10,6 +10,7 @@ class Home extends CI_Controller {
     public function index() {
         $data['title'] = "Selamat Datang";
         $data['subjects'] = $this->mpublic->getAllSubject();
+        $data['prodis'] = $this->mpublic->getAllProdi();
         $data['repos'] = $this->mpublic->getLast(10);
         $this->load->template('home', $data);
     }

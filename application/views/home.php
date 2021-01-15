@@ -18,6 +18,17 @@
                         <p> View items added to the repository in the past week. </p>
                     </div>
                 </div>
+                <?php foreach($prodis as $prodi) { ?>
+                <div class="d-flex tutorial-item mb-2">
+                    <div class="img-wrap">
+                        <a href="<?=site_url();?>browse"><img src="<?=base_url();?>assets/img/browse.png" width="50" alt=" Doc"></a>
+                    </div>
+                    <div>
+                        <h3><a href="<?=site_url();?>browse/prodi/<?=$prodi->prodi_id;?>">Prodi <?=$prodi->prodi_name;?></a></h3>
+                        <p>  Browse the items in the repository by <?=$prodi->prodi_name;?>. </p>
+                    </div>
+                </div>
+                <?php } ?> 
                 <div class="d-flex tutorial-item mb-2">
                     <div class="img-wrap">
                         <a href="<?=site_url();?>search"><img src="<?=base_url();?>assets/img/search.png" width="50" alt=" Doc"></a>
