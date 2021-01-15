@@ -31,6 +31,39 @@
                             </h3>
                         </div>
                     </div>
+                    <!-- Modal -->
+                    <div class="modal fade" id="preview_<?=$file->file_id;?>" tabindex="-1" role="dialog"
+                        aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-lg" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel"><?=$file->original_name;?></h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <a class="btn btn-primary"
+                                        href="<?=site_url().'browse/download/'.$file->file_id;?>">Download</a>
+                                    <br />
+                                    <object data="<?=site_url().'browse/previews/'.$file->file_id;?>"
+                                        type="application/pdf" width="750px" height="650px">
+                                        <embed src="<?=site_url().'browse/previews/'.$file->file_id;?>"
+                                            type="application/pdf">
+                                        <p>This browser does not support PDFs. Please download the PDF to view it: <a
+                                                href="<?=site_url().'browse/previews/'.$file->file_id;?>">Download
+                                                PDF</a>.</p>
+                                        </embed>
+                                    </object>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                    <a class="btn btn-primary"
+                                        href="<?=site_url().'browse/download/'.$file->file_id;?>">Download</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 <?php } ?>
             </div>
         </div>
