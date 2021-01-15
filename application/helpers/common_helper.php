@@ -50,6 +50,10 @@ function getFileNameExt($filecomplete) {
     return pathinfo($filecomplete, PATHINFO_BASENAME);
 }
 
+function fileExt($ext) {
+    return str_replace('.', '', $ext);
+}
+
 function getFileExt($filecomplete) {
     return '.' . pathinfo($filecomplete, PATHINFO_EXTENSION);
 }
