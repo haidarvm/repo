@@ -59,7 +59,7 @@ function getFileExt($filecomplete) {
 }
 
 function notallowed($filename) {
-    if(preg_match('(BAB III|BAB IV|BAB_III|BAB_IV)', $filename) === 1) {
+    if(preg_match('(BAB III|BAB IV|BAB V|BAB_III|BAB_IV|BAB_V)', $filename) === 1) {
         return false;
      }  else  {
          return true;
