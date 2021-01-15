@@ -41,7 +41,7 @@
                                 <?php foreach($prodis as $prodi) { ?>
                                 <div class="col-sm-4">
                                     <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" name="prodi_name" id="prodi_name"
+                                        <input class="form-check-input" type="checkbox" name="prodi_id" id="prodi_id"
                                             value="<?=$prodi->prodi_id;?>">
                                         <label class="form-check-label" for="prodi_name">
                                             <?=$prodi->prodi_name;?>

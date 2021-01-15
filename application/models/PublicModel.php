@@ -63,16 +63,16 @@ class PublicModel extends CI_Model {
     }
 
     public function search($data) {
-        !empty($data['prodi']) ? $this->db->like('prodi_name', $data['prodi_name']) : "";
+        !empty($data['prodi_id']) ? $this->db->where('prodi_id', $data['prodi_id']) : "";
         !empty($data['title']) ? $this->db->like('title', $data['title']) : "";
         !empty($data['abstract']) ? $this->db->or_like('abstract', $data['abstract']) : "";
         !empty($data['author']) ? $this->db->or_like('author', $data['author']) : "";
         !empty($data['keyword']) ? $this->db->or_like('keyword', $data['keyword']) : "";
         !empty($data['date']) ? $this->db->where('YEAR(date)', $data['date']) : "";
-        $this->db->join($this->tb_prodi, $this->tb_prodi.'.prodi_id = '. $this->tb_repo.'.prodi_id', 'left');
+        // $this->db->join($this->tb_prodi, $this->tb_prodi.'.prodi_id = '. $this->tb_repo.'.prodi_id', 'left');
         $this->db->join($this->tb_subject, $this->tb_subject.'.subject_id = '. $this->tb_repo.'.subject_id', 'inner');
         $query = $this->db->get($this->tb_repo);
-       
+        // echo $this->db->last_query();exit;
         return $query->result();
     }
 
