@@ -68,6 +68,9 @@
                 <li><a href="<?=site_url();?>browse" class="nav-link">Browse</a></li>
                 <li><a href="<?=site_url();?>search" class="nav-link">Search</a></li>
                 <li><a href="<?=site_url();?>about" class="nav-link">About</a></li>
+                <?php  if($this->session->userdata('login')) { ?>
+                <li><a href="<?=site_url();?>auth/logout" class="nav-link">Logout</a></li>
+                <?php } ?>
               </ul>
             </nav>
           </div>

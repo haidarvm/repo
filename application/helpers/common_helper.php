@@ -50,12 +50,16 @@ function getFileNameExt($filecomplete) {
     return pathinfo($filecomplete, PATHINFO_BASENAME);
 }
 
+function fileExt($ext) {
+    return str_replace('.', '', $ext);
+}
+
 function getFileExt($filecomplete) {
     return '.' . pathinfo($filecomplete, PATHINFO_EXTENSION);
 }
 
 function notallowed($filename) {
-    if(preg_match('(BAB III|BAB IV|BAB V)', $filename) === 1) {
+    if(preg_match('(BAB III|BAB V|BAB_III|BAB_V|BAB 3|BAB 5|BAB_3|BAB_4|BAB_5)', $filename) === 1) {
         return false;
      }  else  {
          return true;

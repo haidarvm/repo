@@ -54,8 +54,8 @@ class AdminModel extends CI_Model {
     }
 
     public function getAllRepo() {
-        $this->db->limit(1000);
-        $this->db->join($this->tb_subject, $this->tb_subject.'.subject_id = '. $this->tb_repo.'.subject_id', 'inner');
+        // $this->db->limit(1000);
+        $this->db->join($this->tb_subject, $this->tb_subject.'.subject_id = '. $this->tb_repo.'.subject_id', 'left');
         return $this->db->get_where($this->tb_repo)->result();
     }
 

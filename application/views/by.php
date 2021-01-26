@@ -10,7 +10,7 @@
         <?php foreach($repos as $repo) { ?>
         <p><?=$repo->author;?>, <?=year($repo->date);?> <em><a
                     href="<?=site_url().'view/'.$repo->repo_id;?>"><?=$repo->title;?></a></em>
-            <?=ucfirst($repo->subject_name);?></p>
+            <?=ucfirst($repo->subject_name);?>, <?=ucfirst($repo->prodi_name);?></p>
         <?php } ?>
     </div>
 </div>
