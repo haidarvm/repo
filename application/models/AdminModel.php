@@ -49,6 +49,11 @@ class AdminModel extends CI_Model {
         return $this->db->delete($this->tb_files, ['file_id' => $file_id]);
     }
 
+    public function delete($repo_id) {
+        return $this->db->delete($this->tb_repo, ['repo_id' => $repo_id]);
+    }
+
+
     public function getRepo($id) {
         return $this->db->get_where($this->tb_repo, ['repo_id' => $id])->row();
     }

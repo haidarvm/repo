@@ -20,8 +20,8 @@
                         <td><?=$repo->author;?></td>
                         <td><?=$repo->title;?></td>
                         <td><?=$repo->subject_name;?></td>
-                        <td><?=$repo->date;?></td>
-                        <td><a href="<?=base_url().'admin/update/'.$repo->repo_id?>"> Edit</a></td>
+                        <td><?=$repo->date;?></td>                        
+                        <td><a href="<?=base_url().'admin/update/'.$repo->repo_id?>"> Edit</a> | <a  onclick="return confirm('Apakah Anda yakin ingin menghapus?')" href="<?=base_url().'admin/delete/'.$repo->repo_id?>"> Delete</a</td>
                     </tr>
                     <?php } ?>
                 </tbody>

@@ -48,6 +48,11 @@ class Admin extends Admin_Controller {
         redirect('admin/index');
     }
 
+    public function delete($repo_id) {
+        $this->madmin->delete($repo_id);
+        redirect('admin/index/');
+    }
+
     public function delete_file($file_id, $repo_id) {
         $this->madmin->deleteFile($file_id);
         redirect('admin/update/' . $repo_id);
