@@ -20,12 +20,9 @@ function indoDate($date) {
     return date('d-m-Y', strtotime($date));
 }
 
-
 function year($date) {
     return date('Y', strtotime($date));
 }
-
-
 
 function str_slug($string, $separator = '-') {
     // Convert all dashes/underscores into separator
@@ -37,7 +34,7 @@ function str_slug($string, $separator = '-') {
 
     // Replace all separator characters and whitespace by a single separator
     $string = preg_replace('![' . preg_quote($separator) . '\s]+!u', $separator, trim($string));
-    
+
     if (!is_string($string)) {
         return trim($string, $separator);
     } else {
@@ -46,8 +43,8 @@ function str_slug($string, $separator = '-') {
 }
 
 function readKeyword($title) {
-    $keyword = explode(" ",trim($title));
-    $implode = implode(",", $keyword);
+    $keyword = explode(' ', trim($title));
+    $implode = implode(',', $keyword);
     return $implode;
 }
 
@@ -56,18 +53,17 @@ function metaDescription($content) {
     if (strlen($cleanContent) > 171) {
         $cutContent = substr($cleanContent, 0, strpos($cleanContent, ' ', 171));
         // var_dump($cutContent);
-        $removeFirstThree = str_ireplace('#', '', $cutContent);  
-        $removeEmpty = preg_replace('/\s*$/','',$removeFirstThree);
+        $removeFirstThree = str_ireplace('#', '', $cutContent);
+        $removeEmpty = preg_replace('/\s*$/', '', $removeFirstThree);
         // foreach(explode(" ", $removeEmpty) as $text) {
         //     var_dump(textBinASCII($text));
         // }
-        $cleanChar = preg_replace('/[^A-Za-z0-9 !@#$%^&*().]/u','', strip_tags($removeEmpty));
-        $arrText = array_filter(explode(" ", $cleanChar));
-        return implode(' ',$arrText);
+        $cleanChar = preg_replace('/[^A-Za-z0-9 !@#$%^&*().]/u', '', strip_tags($removeEmpty));
+        $arrText = array_filter(explode(' ', $cleanChar));
+        return implode(' ', $arrText);
     }
     return $content;
 }
-
 
 function createFilePath() {
     $path = FCPATH . 'assets/files/';
@@ -103,9 +99,9 @@ function getFileExt($filecomplete) {
 }
 
 function notallowed($filename) {
-    if(preg_match('(BAB III|BAB V|BAB_III|BAB_V|BAB 3|BAB 5|BAB_3|BAB_4|BAB_5)', $filename) === 1) {
+    if (preg_match('(BAB III|BAB V|BAB_III|BAB_V|BAB 3|BAB 5|BAB_3|BAB_4|BAB_5)', $filename) === 1) {
         return false;
-     }  else  {
-         return true;
-     }
+    } else {
+        return true;
+    }
 }
