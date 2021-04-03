@@ -86,7 +86,7 @@
                     <div class="col-2">
                         Author:
                     </div>
-                    <div class="col-6">
+                    <div class="col-10">
                         <?=$repo->author;?>
                     </div>
                 </div>
@@ -94,7 +94,7 @@
                     <div class="col-2">
                         Item Type:
                     </div>
-                    <div class="col-6">
+                    <div class="col-10">
                         <?=$repo->name;?>
                     </div>
                 </div>
@@ -102,7 +102,7 @@
                     <div class="col-2">
                         Subject:
                     </div>
-                    <div class="col-6">
+                    <div class="col-10">
                         <?=$repo->subject_name;?>
                     </div>
                 </div>
@@ -110,7 +110,7 @@
                     <div class="col-2">
                         Date:
                     </div>
-                    <div class="col-6">
+                    <div class="col-10">
                         <?=year($repo->date);?>
                     </div>
                 </div>

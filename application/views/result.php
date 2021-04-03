@@ -11,7 +11,7 @@
         if (count($results) > 0) {
             foreach ($results as $result) { ?>
         <p><?=$result->author;?>, <?=year($result->date);?> <em><a
-                    href="<?=site_url() . 'view/' . $result->repo_id;?>"><?=$result->title;?></a></em>
+                    href="<?=site_url() . 'view/' . $result->repo_id.'/'.str_slug($result->title);?>"><?=$result->title;?></a></em>
             <?=ucfirst($result->subject_name);?></p>
         <?php }
         } else {?>

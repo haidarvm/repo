@@ -1,23 +1,31 @@
 <!doctype html>
-<html lang="en">
-
+<html lang="id">
+<?php 
+$homeKeyword = 'Repository Fisip, Repository Fisip Unla, Universitas langlangbuana, unla, langlangbuana, fisip, repository';
+$homeTitle = "Repository Fisip Unla";
+$homeDescription = 'Repository Fisip Universitas langlangbuana unla';
+$metaKeyword = !empty($keyword) ? readKeyword($keyword) : $homeKeyword ;
+$metaDescriptionClean = empty($metaDescription) ? $homeDescription : $metaDescription;
+$metaTitle = empty($title) ? trim($homeTitle) : trim($title);
+?>
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="Repository Fisip Universitas langlangbuana unla">
-  <meta name="keywords" content="Repository Fisip, Repository Fisip Unla, Universitas langlangbuana, unla, langlangbuana, fisip, repository" />
+	<meta name="description" content="<?=$metaDescriptionClean?>">
+	<meta name="title" content="<?php echo $metaTitle;?>">
+	<meta name="keywords" content="<?php echo $metaKeyword;?>">
   <meta name="robots" content="index, follow" />
   <meta name="googlebot" content="index,follow" />
   <meta name="author" content="haidarvm">
   <meta http-equiv="content-language" content="In-Id" />
   <meta property="og:site_name" content="<?=site_url();?>" />
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Repository Fisip Unla" />
+	<meta property="og:title" content="<?php echo $metaTitle;?>" />
+	<meta property="og:description" content="<?=$metaDescriptionClean?>" />
   <meta property="og:url" content="<?=site_url();?>" />
-  <meta property="og:description" content="Repository Fisip Universitas langlangbuana unla"/>
   <meta property="og:image" content="<?=base_url();?>assets/img/unla.jpg" />
   <meta property="og:type" content="website" />
-  <link rel="canonical" href="https://repositoryfisip.unla.ac.id/" />
+  <link rel="canonical" href="<?=site_url();?>" />
     <!-- <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet"> -->
   <link rel="stylesheet" href="<?=base_url();?>assets/fonts/icomoon/style.css">
   <link rel="stylesheet" href="<?=base_url();?>assets/fonts/brand/style.css">

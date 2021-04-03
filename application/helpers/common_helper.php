@@ -25,6 +25,50 @@ function year($date) {
     return date('Y', strtotime($date));
 }
 
+
+
+function str_slug($string, $separator = '-') {
+    // Convert all dashes/underscores into separator
+    $flip = '-' == $separator ? '_' : '-';
+    $string = preg_replace('![' . preg_quote($flip) . ']+!u', $separator, trim($string));
+
+    // Remove all characters that are not the separator, letters, numbers, or whitespace.
+    $string = preg_replace('![^' . preg_quote($separator) . '\pL\pN\s]+!u', '', mb_strtolower(trim($string)));
+
+    // Replace all separator characters and whitespace by a single separator
+    $string = preg_replace('![' . preg_quote($separator) . '\s]+!u', $separator, trim($string));
+    
+    if (!is_string($string)) {
+        return trim($string, $separator);
+    } else {
+        return trim($string);
+    }
+}
+
+function readKeyword($title) {
+    $keyword = explode(" ",trim($title));
+    $implode = implode(",", $keyword);
+    return $implode;
+}
+
+function metaDescription($content) {
+    $cleanContent = strip_tags(html_entity_decode($content));
+    if (strlen($cleanContent) > 171) {
+        $cutContent = substr($cleanContent, 0, strpos($cleanContent, ' ', 171));
+        // var_dump($cutContent);
+        $removeFirstThree = str_ireplace('#', '', $cutContent);  
+        $removeEmpty = preg_replace('/\s*$/','',$removeFirstThree);
+        // foreach(explode(" ", $removeEmpty) as $text) {
+        //     var_dump(textBinASCII($text));
+        // }
+        $cleanChar = preg_replace('/[^A-Za-z0-9 !@#$%^&*().]/u','', strip_tags($removeEmpty));
+        $arrText = array_filter(explode(" ", $cleanChar));
+        return implode(' ',$arrText);
+    }
+    return $content;
+}
+
+
 function createFilePath() {
     $path = FCPATH . 'assets/files/';
 
