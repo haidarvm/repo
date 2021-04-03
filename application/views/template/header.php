@@ -16,6 +16,7 @@ $metaTitle = empty($title) ? trim($homeTitle) : trim($title);
 	<meta name="keywords" content="<?php echo $metaKeyword;?>">
   <meta name="robots" content="index, follow" />
   <meta name="googlebot" content="index,follow" />
+  <meta name="google-site-verification" content="-Jv9963EL2y68aP3AQ9UUWyPAKxY45qoP_seVJwalXM" />
   <meta name="author" content="haidarvm">
   <meta http-equiv="content-language" content="In-Id" />
   <meta property="og:site_name" content="<?=site_url();?>" />
